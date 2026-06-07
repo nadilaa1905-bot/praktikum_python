@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Algoritma Pemrograman</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:
+linear-gradient(
+135deg,
+#faf6ef 0%,
+#f3e7d7 50%,
+#efe0cb 100%
+);
+overflow-x:hidden;
+color:#2f2f2f;
+position:relative;
+min-height:100vh;
+}
+
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:40px 0;
+}
+
+.top{
+display:flex;
+justify-content:space-between;
+align-items:flex-start;
+margin-bottom:20px;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.profile-card{
+background:white;
+padding:20px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+min-width:250px;
+}
+
+.profile-card p{
+margin:10px 0;
+font-size:15px;
+}
+
+.small-title{
+text-align:center;
+letter-spacing:4px;
+font-size:14px;
+margin-bottom:10px;
+color:#9d7a42;
+font-weight:600;
+}
+
+.main-title{
+text-align:center;
+font-size:72px;
+font-weight:800;
+line-height:1;
+font-family:Georgia, serif;
+color:#1f1f1f;
+margin-bottom:20px;
+}
+
+.quote{
+text-align:center;
+font-style:italic;
+margin-bottom:30px;
+color:#555;
+}
+
+.banner{
+width:100%;
+border-radius:30px;
+overflow:hidden;
+box-shadow:0 15px 30px rgba(0,0,0,0.12);
+margin-bottom:40px;
+}
+
+.banner img{
+width:100%;
+display:block;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.card{
+background:rgba(255,255,255,0.85);
+backdrop-filter:blur(8px);
+border-radius:25px;
+padding:30px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.icon{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.card h3{
+font-size:30px;
+margin-bottom:20px;
+}
+
+.btn{
+display:inline-block;
+background:#4b3725;
+color:white;
+padding:12px 25px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+}
+
+.btn:hover{
+background:#2f2115;
+}
+
+.tugas5{
+max-width:250px;
+margin:25px auto 0;
+}
+
+footer{
+margin-top:60px;
+background:#3c2d22;
+color:white;
+padding:25px;
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:10px;
+}
+
+@media(max-width:768px){
+
+.main-title{
+font-size:48px;
+}
+
+.top{
+justify-content:center;
+}
+
+.profile-card{
+width:100%;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<div class="top">
+
+<div class="profile-card">
+<p><b>Nama Mahasiswa</b><br>Nadila Rahma Anggraini</p>
+<p><b>NIM</b><br>250441100044</p>
+</div>
+
+<div class="profile-card">
+<p><b>Program Studi</b><br>Teknik Informatika</p>
+<p><b>Dosen Pengampu</b><br>Moh. Ahsan, S.Kom., MT.</p>
+</div>
+
+</div>
+
+<div class="small-title">
+KUMPULAN TUGAS
+</div>
+
+<div class="main-title">
+ALGORITMA<br>PEMROGRAMAN
+</div>
+
+<div class="quote">
+"Code is like humor. When you have to explain it, it's bad."
+</div>
+
+<div class="banner">
+<img src="banner.jpg.jpeg" alt="Banner">
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📄</div>
+<h3>1</h3>
+<a href="tugas1.pdf.pdf" class="btn">Lihat PDF</a>
+</div>
+
+<div class="card">
+<div class="icon">🐍</div>
+<h3>2</h3>
+<a href="tugas2.pdf.pdf" class="btn">Lihat PDF</a>
+</div>
+
+<div class="card">
+<div class="icon">💻</div>
+<h3>3</h3>
+<a href="tugas3.pdf.pdf" class="btn">Lihat PDF</a>
+</div>
+
+<div class="card">
+<div class="icon">📊</div>
+<h3>4</h3>
+<a href="tugas4.pdf.pdf" class="btn">Lihat PDF</a>
+</div>
+
+</div>
+
+<div class="card tugas5">
+<div class="icon">🚀</div>
+<h3>5</h3>
+<a href="tugas5.pdf.pdf" class="btn">Lihat PDF</a>
+</div>
+
+</div>
+
+<footer>
+<div>
+Universitas Kanjuruhan Malang
+</div>
+
+<div>
+Keep Coding and Keep Growing
+</div>
+</footer>
+
+</body>
+</html>
