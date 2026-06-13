@@ -1,262 +1,1557 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
+<body id="top">
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Algoritma Pemrograman</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
 <style>
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background:#f4f8fc;
+    margin:0;
+    padding:0;
+    line-height:1.8;
+    color:#333;
+}
+
+
+section{
+    max-width:1000px;
+    margin: 30px auto;
+}
+
+.profil{
+    max-width:900px;
+    margin:25px auto;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.menu-modul{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:12px;
+margin:30px 0;
+}
+
+.menu-modul a{
+text-decoration:none;
+background:#1e88e5;
+color:white;
+padding:12px 20px;
+border-radius:10px;
+font-weight:600;
+transition:0.3s;
+}
+
+.menu-modul a:hover{
+background:#1565c0;
+transform:translateY(-3px);
+}
+
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+font-family:Arial, sans-serif;
 }
 
 body{
-background:
-linear-gradient(
-135deg,
-#faf6ef 0%,
-#f3e7d7 50%,
-#efe0cb 100%
-);
-overflow-x:hidden;
-color:#2f2f2f;
-position:relative;
-min-height:100vh;
+background:#0f172a;
+color:white;
+line-height:1.8;
 }
 
-
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-padding:40px 0;
-}
-
-.top{
+nav{
+position:sticky;
+top:0;
+z-index:999;
+background:#111827;
+padding:15px 8%;
 display:flex;
 justify-content:space-between;
-align-items:flex-start;
-margin-bottom:20px;
-flex-wrap:wrap;
+align-items:center;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+list-style:none;
 gap:20px;
 }
 
-.profile-card{
-background:white;
-padding:20px;
-border-radius:20px;
-box-shadow:0 8px 20px rgba(0,0,0,0.08);
-min-width:250px;
+nav a{
+text-decoration:none;
+color:white;
+font-weight:bold;
 }
 
-.profile-card p{
-margin:10px 0;
-font-size:15px;
-}
-
-.small-title{
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
 text-align:center;
-letter-spacing:4px;
-font-size:14px;
-margin-bottom:10px;
-color:#9d7a42;
-font-weight:600;
-}
-
-.main-title{
-text-align:center;
-font-size:72px;
-font-weight:800;
-line-height:1;
-font-family:Georgia, serif;
-color:#1f1f1f;
-margin-bottom:20px;
-}
-
-.quote{
-text-align:center;
-font-style:italic;
-margin-bottom:30px;
-color:#555;
-}
-
-.banner{
-width:100%;
-border-radius:30px;
-overflow:hidden;
-box-shadow:0 15px 30px rgba(0,0,0,0.12);
-margin-bottom:40px;
-}
-
-.banner img{
-width:100%;
-display:block;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-}
-
-.card{
-background:rgba(255,255,255,0.85);
-backdrop-filter:blur(8px);
-border-radius:25px;
 padding:30px;
-text-align:center;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-transition:.3s;
+background:
+linear-gradient(
+135deg,
+#0f172a,
+#1e3a8a
+);
 }
 
-.card:hover{
-transform:translateY(-8px);
+.hero img{
+width:100%;
+max-width:1200px;
+height:auto;
+border-radius:20px;
+display: block;
+margin:auto;
+box-shadow:0 0 30px rgba(59,130,246,.4);
 }
 
-.icon{
-font-size:55px;
+.hero h1{
+font-size:50px;
 margin-bottom:15px;
 }
 
-.card h3{
-font-size:30px;
-margin-bottom:20px;
+.hero p{
+max-width:700px;
+margin:auto;
+font-size:18px;
 }
 
 .btn{
 display:inline-block;
-background:#4b3725;
-color:white;
-padding:12px 25px;
-border-radius:12px;
+margin-top:25px;
+padding:14px 28px;
+background:white;
+color:#0f172a;
 text-decoration:none;
-font-weight:600;
+border-radius:10px;
+font-weight:bold;
 }
 
-.btn:hover{
-background:#2f2115;
+section{
+width:90%;
+max-width:1200px;
+margin:auto;
+padding:80px 0;
 }
 
-.tugas5{
-max-width:250px;
-margin:25px auto 0;
+h2{
+margin-bottom:20px;
+font-size:35px;
+}
+
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+box-shadow:
+0 0 20px rgba(59,130,246,.2);
+}
+
+.materi-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(180px,1fr));
+gap:20px;
+}
+
+.materi-grid a{
+background:#2563eb;
+padding:20px;
+text-align:center;
+text-decoration:none;
+color:white;
+border-radius:15px;
+font-weight:bold;
+transition:.3s;
+}
+
+.materi-grid a:hover{
+transform:translateY(-5px);
+}
+
+.placeholder{
+background:#1e293b;
+padding:30px;
+border-radius:20px;
+margin-top:30px;
 }
 
 footer{
-margin-top:60px;
-background:#3c2d22;
-color:white;
-padding:25px;
-display:flex;
-justify-content:space-between;
-flex-wrap:wrap;
-gap:10px;
+background:#111827;
+padding:40px;
+text-align:center;
+margin-top:50px;
 }
 
 @media(max-width:768px){
 
-.main-title{
-font-size:48px;
+.hero h1{
+font-size:32px;
 }
 
-.top{
+nav{
+flex-direction:column;
+gap:10px;
+}
+
+nav ul{
+flex-wrap:wrap;
 justify-content:center;
 }
 
-.profile-card{
-width:100%;
 }
 
-}
 </style>
 
 </head>
+
 <body>
 
-<div class="container">
+<nav>
 
-<div class="top">
-
-<div class="profile-card">
-<p><b>Nama Mahasiswa</b><br>Nadila Rahma Anggraini</p>
-<p><b>NIM</b><br>250403010016</p>
+<div class="logo">
+ALGORITMA PEMROGRAMAN
 </div>
 
-<div class="profile-card">
-<p><b>Program Studi</b><br>Teknik Informatika</p>
-<p><b>Dosen Pengampu</b><br>Moh. Ahsan, S.Kom., MT.</p>
-</div>
+<ul>
 
-</div>
+<li><a href="#home">Home</a></li>
 
-<div class="small-title">
-KUMPULAN TUGAS
-</div>
+<li><a href="#profil">Profil</a></li>
 
-<div class="main-title">
-ALGORITMA<br>PEMROGRAMAN
-</div>
+<li><a href="#pendahuluan">Pendahuluan</a></li>
 
-<div class="quote">
-"Code is like humor. When you have to explain it, it's bad."
-</div>
+<li><a href="#materi">Materi</a></li>
 
-<div class="banner">
+</ul>
+
+</nav>
+
+<section id="home" class="hero">
+
+<div>
+
 <img src="banner.jpg.jpeg" alt="Banner">
+
+<h1>
+ALGORITMA PEMROGRAMAN
+</h1>
+
+<p>
+
+Website dokumentasi materi, tugas,
+dan hasil pembelajaran mata kuliah
+Algoritma Pemrograman.
+
+</p>
+
+<a href="#materi" class="btn">
+Mulai Membaca
+</a>
+
 </div>
 
-<div class="cards">
+</section>
+
+<section id="profil">
+
+<h2>Profil Mahasiswa</h2>
 
 <div class="card">
-<div class="icon">📄</div>
-<h3>1</h3>
-<a href="tugas1.pdf.pdf" class="btn">Lihat PDF</a>
+
+<b>Nama</b>             : Nadila Rahma Anggraini<br>
+
+<b>NIM</b>              : 250403010016<br>
+
+<b>Program Studi</b>    : Teknik Informatika<br>
+
+<b>Dosen Pengampu</b>   : Moh. Ahsan, S.Kom., MT.<br>
+
 </div>
+
+
+
+</section>
+</section>
+
+<section id="pendahuluan">
+
+<h2>Pendahuluan</h2>
 
 <div class="card">
-<div class="icon">🐍</div>
-<h3>2</h3>
-<a href="tugas2.pdf.pdf" class="btn">Lihat PDF</a>
-</div>
 
-<div class="card">
-<div class="icon">💻</div>
-<h3>3</h3>
-<a href="tugas3.pdf.pdf" class="btn">Lihat PDF</a>
-</div>
+<p>
+Website ini merupakan dokumentasi pembelajaran Praktikum Algoritma Pemrograman yang berisi kumpulan materi, tugas, latihan, dan pembahasan yang telah dipelajari selama satu semester. Setiap pertemuan disusun secara sistematis untuk memudahkan proses pembelajaran serta menjadi sarana dokumentasi hasil praktikum yang telah dilaksanakan.
+</p>
 
-<div class="card">
-<div class="icon">📊</div>
-<h3>4</h3>
-<a href="tugas4.pdf.pdf" class="btn">Lihat PDF</a>
-</div>
+<br>
+
+<p>
+
+Seluruh materi, tugas, pembahasan, serta
+laporan praktikum disusun dalam bentuk
+website agar lebih mudah dipelajari kembali.
+
+</p>
 
 </div>
 
-<div class="card tugas5">
-<div class="icon">🚀</div>
-<h3>5</h3>
-<a href="tugas5.pdf.pdf" class="btn">Lihat PDF</a>
+<section class="daftar-isi">
+
+<h2>Daftar Isi Praktikum</h2>
+
+<ul>
+
+<li>Pertemuan 1 - Pendahuluan</li>
+
+<li>Pertemuan 2 - Struktur Dasar Algoritma</li>
+
+<li>Pertemuan 3 - Struktur dan Karakteristik Algoritma</li>
+
+<li>Pertemuan 4 - Latihan dan Pembahasan</li>
+
+<li>Pertemuan 5 - Post Test Tipe Data</li>
+
+<li>Pertemuan 8 - Kombinasi Struktur Algoritma</li>
+
+<li>Pertemuan 9 - Struktur Algoritma Sekuensial</li>
+
+<li>Pertemuan 10 - Flowchart dan Pseudocode</li>
+
+<li>Pertemuan 11 - Struktur Perulangan</li>
+
+<li>Pertemuan 12 - Penguatan Materi</li>
+
+<li>Pertemuan 13 - Array</li>
+
+<section id="materi">
+
+<div class="materi-grid">
+
+<a href="#p1">Pertemuan 1</a>
+<a href="#p2">Pertemuan 2</a>
+<a href="#p3">Pertemuan 3</a>
+<a href="#p4">Pertemuan 4</a>
+<a href="#p5">Pertemuan 5</a>
+<a href="#p8">Pertemuan 8</a>
+<a href="#p9">Pertemuan 9</a>
+<a href="#p10">Pertemuan 10</a>
+<a href="#p11">Pertemuan 11</a>
+<a href="#p12">Pertemuan 12</a>
+<a href="#p13">Pertemuan 13</a>
+
 </div>
 
+</section>
+
+<section id="p1">
+<section id="p1">
+
+<div class="placeholder">
+
+<h2>Pertemuan 1</h2>
+
+<h3>Pengantar Algoritma Pemrograman</h3>
+
+<p>
+Algoritma merupakan salah satu konsep dasar yang sangat penting dalam dunia komputer dan pemrograman. Sebelum sebuah program dibuat, programmer harus terlebih dahulu menyusun langkah-langkah penyelesaian masalah yang disebut algoritma. Dengan adanya algoritma, proses pembuatan program menjadi lebih terarah dan sistematis sehingga tujuan yang diinginkan dapat tercapai dengan baik.
+</p>
+
+<p>
+Dalam kehidupan sehari-hari, sebenarnya manusia sering menggunakan algoritma tanpa disadari. Misalnya saat membuat minuman, menggunakan mesin ATM, atau mengikuti petunjuk perjalanan menuju suatu tempat. Semua aktivitas tersebut dilakukan melalui urutan langkah yang teratur untuk mencapai hasil tertentu.
+</p>
+
+<h3>Pengertian Algoritma</h3>
+
+<p>
+Secara umum, algoritma dapat diartikan sebagai serangkaian langkah-langkah logis dan sistematis yang digunakan untuk menyelesaikan suatu masalah. Langkah-langkah tersebut harus disusun secara berurutan agar menghasilkan solusi yang sesuai dengan tujuan yang ingin dicapai.
+</p>
+
+<p>
+Dalam bidang komputer, algoritma berfungsi sebagai dasar dalam pembuatan program. Sebuah program yang baik biasanya diawali dengan algoritma yang jelas sehingga proses penulisan kode menjadi lebih mudah dan terstruktur. Oleh karena itu, pemahaman mengenai algoritma menjadi keterampilan yang wajib dimiliki oleh setiap programmer.
+</p>
+
+<h3>Pentingnya Algoritma dalam Pemrograman</h3>
+
+<p>
+Algoritma memiliki peran penting karena membantu programmer memahami alur penyelesaian masalah sebelum program dibuat. Dengan algoritma yang baik, suatu permasalahan yang kompleks dapat dipecah menjadi beberapa langkah yang lebih sederhana dan mudah dipahami.
+</p>
+
+<p>
+Selain itu, algoritma juga membantu meningkatkan efisiensi program. Program yang dibangun berdasarkan algoritma yang baik biasanya lebih mudah dikembangkan, lebih mudah diperbaiki ketika terjadi kesalahan, dan memiliki kinerja yang lebih optimal.
+</p>
+
+<h3>Hubungan Algoritma dan Program</h3>
+
+<p>
+Algoritma dan program merupakan dua hal yang saling berkaitan. Algoritma adalah rancangan atau urutan langkah penyelesaian masalah, sedangkan program adalah implementasi algoritma ke dalam bahasa pemrograman yang dapat dijalankan oleh komputer. Dengan kata lain, algoritma merupakan dasar yang digunakan dalam proses pembuatan program.
+</p>
+
+<p>
+Satu algoritma dapat diterapkan ke berbagai bahasa pemrograman seperti Python, Java, C++, maupun bahasa lainnya. Meskipun sintaks yang digunakan berbeda, logika penyelesaiannya tetap sama sesuai dengan algoritma yang telah dirancang sebelumnya.
+</p>
+
+<h3>Kesimpulan</h3>
+
+<p>
+Algoritma merupakan dasar utama dalam pemrograman yang berisi langkah-langkah logis dan sistematis untuk menyelesaikan suatu masalah. Pemahaman terhadap algoritma sangat penting karena membantu programmer menyusun solusi yang efektif sebelum diterapkan ke dalam bentuk program. Dengan menguasai konsep algoritma, mahasiswa akan lebih mudah mempelajari berbagai bahasa pemrograman dan mengembangkan perangkat lunak yang berkualitas.
+</p>
+
+</div>
+
+</section>
+</section>
+
+<section id="p2">
+<section id="p2">
+
+<div class="placeholder">
+
+<h2>Pertemuan 2</h2>
+
+<h3>Struktur Dasar Algoritma</h3>
+
+<p>
+Struktur dasar algoritma merupakan fondasi utama dalam penyusunan program komputer. Sebelum membuat sebuah program, programmer harus memahami bagaimana langkah-langkah penyelesaian masalah akan disusun secara logis dan sistematis. Dengan adanya struktur algoritma yang baik, proses pembuatan program menjadi lebih mudah dipahami, terarah, dan dapat menghasilkan solusi yang sesuai dengan kebutuhan pengguna.
+</p>
+
+<p>
+Dalam dunia pemrograman, algoritma berfungsi sebagai pedoman yang menjelaskan urutan pekerjaan yang harus dilakukan oleh komputer. Setiap langkah yang dibuat harus memiliki tujuan yang jelas sehingga data yang diolah dapat menghasilkan informasi yang benar. Oleh karena itu, pemahaman mengenai struktur dasar algoritma menjadi langkah awal yang penting sebelum mempelajari bahasa pemrograman.
+</p>
+
+<h3>Notasi Algoritmik</h3>
+
+<p>
+Notasi algoritmik adalah cara penulisan algoritma menggunakan bahasa yang mudah dipahami oleh manusia. Notasi ini digunakan untuk menggambarkan langkah-langkah penyelesaian masalah tanpa terikat pada aturan atau sintaks bahasa pemrograman tertentu.
+</p>
+
+<p>
+Dengan menggunakan notasi algoritmik, programmer dapat lebih fokus pada logika penyelesaian masalah dibandingkan cara penulisan kode. Notasi algoritmik juga mempermudah komunikasi antar programmer karena dapat dipahami oleh siapa saja meskipun menggunakan bahasa pemrograman yang berbeda.
+</p>
+
+<h3>Tipe Dasar</h3>
+
+<p>
+Tipe data merupakan jenis data yang digunakan untuk menyimpan suatu nilai dalam program. Setiap tipe data memiliki karakteristik yang berbeda dan digunakan sesuai kebutuhan pengolahan data.
+</p>
+
+<p>
+Beberapa tipe data dasar yang sering digunakan adalah integer untuk bilangan bulat, float untuk bilangan desimal, character untuk satu karakter, string untuk kumpulan karakter atau teks, serta boolean yang hanya memiliki nilai benar (true) atau salah (false). Pemilihan tipe data yang tepat akan membantu program berjalan lebih efektif dan efisien.
+</p>
+
+<h3>Ekspresi</h3>
+
+<p>
+Ekspresi merupakan gabungan antara variabel, konstanta, dan operator yang menghasilkan suatu nilai. Dalam pemrograman, ekspresi sering digunakan untuk melakukan perhitungan maupun pengambilan keputusan.
+</p>
+
+<p>
+Contohnya adalah operasi matematika seperti penjumlahan, pengurangan, perkalian, dan pembagian. Hasil dari ekspresi tersebut nantinya dapat disimpan ke dalam variabel atau digunakan dalam proses lainnya.
+</p>
+
+<h3>Nilai (Value)</h3>
+
+<p>
+Nilai atau value adalah data yang tersimpan dalam suatu variabel maupun konstanta. Nilai dapat berupa angka, huruf, teks, maupun nilai logika. Nilai inilah yang nantinya akan diproses oleh program untuk menghasilkan suatu informasi.
+</p>
+
+<p>
+Sebagai contoh, pada variabel umur yang berisi angka 19, maka angka 19 tersebut merupakan nilai yang tersimpan di dalam variabel. Nilai menjadi komponen penting karena seluruh proses komputasi pada dasarnya merupakan proses pengolahan nilai.
+</p>
+
+<h3>Assignment</h3>
+
+<p>
+Assignment adalah proses pemberian nilai ke dalam suatu variabel. Dalam pemrograman, assignment digunakan untuk menyimpan data yang nantinya dapat digunakan kembali selama program berjalan.
+</p>
+
+<p>
+Sebagai contoh, variabel nama dapat diberikan nilai "Nadila", sedangkan variabel umur dapat diberikan nilai 19. Dengan adanya assignment, program dapat menyimpan dan mengelola data dengan lebih mudah.
+</p>
+
+<h3>Input dan Output</h3>
+
+<p>
+Input adalah data yang dimasukkan ke dalam program untuk diproses. Data tersebut dapat berasal dari pengguna, file, sensor, maupun sumber lainnya. Setelah data diterima, program akan mengolahnya sesuai algoritma yang telah dibuat.
+</p>
+
+<p>
+Output adalah hasil yang diperoleh setelah proses pengolahan selesai dilakukan. Output dapat berupa teks, angka, laporan, maupun informasi lainnya yang ditampilkan kepada pengguna. Hubungan antara input dan output sangat penting karena kualitas output sangat bergantung pada data input yang diberikan.
+</p>
+
+<h3>Kesimpulan</h3>
+
+<p>
+Struktur dasar algoritma merupakan dasar penting dalam pemrograman yang membantu programmer menyusun solusi secara sistematis dan logis. Beberapa konsep yang dipelajari meliputi notasi algoritmik, tipe data dasar, ekspresi, nilai, assignment, serta input dan output. Dengan memahami konsep-konsep tersebut, mahasiswa akan lebih mudah mempelajari pemrograman dan mengembangkan program yang efektif serta mudah dipahami.
+</p>
+
+</div>
+
+</section>
+</section>
+
+<section id="p3">
+<section id="p3">
+
+<div class="placeholder">
+
+<h2>Pertemuan 3</h2>
+
+<h3>Struktur dan Karakteristik Algoritma</h3>
+
+<p>
+Algoritma merupakan serangkaian langkah yang disusun secara logis dan sistematis untuk menyelesaikan suatu masalah. Dalam dunia pemrograman, algoritma memiliki peran yang sangat penting karena menjadi dasar dalam pembuatan program. Sebelum menuliskan kode program, seorang programmer harus memahami terlebih dahulu langkah-langkah penyelesaian masalah agar program yang dibuat dapat berjalan sesuai tujuan.
+</p>
+
+<p>
+Struktur algoritma digunakan untuk mengatur urutan instruksi yang akan dijalankan oleh komputer. Dengan adanya struktur yang jelas, proses pengolahan data menjadi lebih mudah dipahami dan meminimalkan terjadinya kesalahan dalam pembuatan program.
+</p>
+
+<h3>Struktur Dasar Algoritma</h3>
+
+<p>
+Secara umum, algoritma memiliki tiga struktur dasar yang sering digunakan, yaitu struktur sekuensial, pemilihan (selection), dan perulangan (looping). Ketiga struktur ini menjadi fondasi utama dalam hampir seluruh bahasa pemrograman modern.
+</p>
+
+<p>
+Struktur sekuensial adalah struktur yang menjalankan instruksi secara berurutan dari atas ke bawah. Setiap langkah akan dikerjakan satu per satu sesuai urutan yang telah ditentukan.
+</p>
+
+<p>
+Struktur pemilihan digunakan ketika program harus menentukan keputusan berdasarkan suatu kondisi tertentu. Struktur ini memungkinkan program memilih tindakan yang berbeda sesuai kondisi yang terjadi.
+</p>
+
+<p>
+Sedangkan struktur perulangan digunakan untuk menjalankan instruksi yang sama secara berulang tanpa harus menuliskan kode yang sama berkali-kali. Struktur ini sangat membantu dalam meningkatkan efisiensi program.
+</p>
+
+<h3>Karakteristik Algoritma</h3>
+
+<p>
+Agar dapat digunakan dengan baik, sebuah algoritma harus memiliki beberapa karakteristik penting. Karakteristik pertama adalah memiliki input, yaitu data yang akan diproses untuk menghasilkan suatu informasi.
+</p>
+
+<p>
+Karakteristik kedua adalah menghasilkan output. Setelah data diproses, algoritma harus memberikan hasil yang sesuai dengan tujuan penyelesaian masalah.
+</p>
+
+<p>
+Selain itu, algoritma juga harus memiliki langkah-langkah yang jelas dan tidak menimbulkan penafsiran ganda. Setiap instruksi harus mudah dipahami sehingga dapat diterapkan dengan benar ke dalam program.
+</p>
+
+<p>
+Karakteristik lainnya adalah memiliki akhir yang jelas atau finite. Artinya, algoritma harus berhenti setelah semua proses selesai dilakukan dan tidak berjalan tanpa batas.
+</p>
+
+<h3>Manfaat Penggunaan Algoritma</h3>
+
+<p>
+Penggunaan algoritma memberikan banyak manfaat dalam proses pengembangan perangkat lunak. Dengan algoritma yang baik, programmer dapat menyelesaikan masalah secara lebih terstruktur dan efisien.
+</p>
+
+<p>
+Selain itu, algoritma juga membantu dalam proses perawatan program. Ketika terjadi kesalahan atau diperlukan pengembangan fitur baru, program yang dibuat berdasarkan algoritma yang jelas akan lebih mudah dipahami dan diperbaiki.
+</p>
+
+<h3>Kesimpulan</h3>
+
+<p>
+Struktur dan karakteristik algoritma merupakan bagian penting dalam pemrograman. Dengan memahami struktur dasar algoritma serta karakteristik yang dimilikinya, mahasiswa dapat menyusun solusi yang lebih sistematis dan menghasilkan program yang lebih efektif. Oleh karena itu, pemahaman terhadap konsep algoritma menjadi dasar yang sangat penting sebelum mempelajari materi pemrograman yang lebih kompleks.
+</p>
+
+</div>
+
+</section>
+</section>
+
+<section id="p4">
+<div class="placeholder">
+<section id="p4">
+
+<div class="placeholder">
+
+<h2>Pertemuan 4</h2>
+
+<h3>Latihan dan Pembahasan Algoritma</h3>
+
+<p>
+Pada pertemuan ini mahasiswa diberikan beberapa pertanyaan yang bertujuan untuk menguji pemahaman mengenai konsep dasar algoritma, program, struktur algoritma, serta fungsi bahasa pemrograman. Pembahasan berikut disusun berdasarkan materi yang telah dipelajari pada pertemuan sebelumnya.
+</p>
+
+<a href="tugas1.pdf.pdf" class="btn">📄 Lihat PDF Tugas</a>
+
+<hr>
+
+<h3>Soal 1</h3>
+
+<p>
+Berikan contoh algoritma dalam kehidupan sehari-hari berdasarkan studi kasus yang diberikan.
+</p>
+
+<h4>a. Mengambil Uang di ATM</h4>
+
+<p>
+Algoritma digunakan untuk menjelaskan urutan langkah yang harus dilakukan agar proses penarikan uang dapat berjalan dengan benar.
+</p>
+
+<ul>
+<li>Masukkan kartu ATM</li>
+<li>Masukkan PIN</li>
+<li>Pilih menu tarik tunai</li>
+<li>Pilih jumlah uang</li>
+<li>Ambil uang dan kartu ATM</li>
+</ul>
+
+<h4>b. Membuat Kopi dengan Rasa Manis dan Pahit yang Pas</h4>
+
+<p>
+Pembuatan kopi juga dapat digambarkan menggunakan algoritma karena dilakukan melalui langkah-langkah yang berurutan.
+</p>
+
+<ul>
+<li>Siapkan gelas dan kopi</li>
+<li>Masukkan kopi secukupnya</li>
+<li>Tambahkan gula sesuai selera</li>
+<li>Tuangkan air panas</li>
+<li>Aduk hingga rata</li>
+</ul>
+
+<h4>c. Menghitung Nilai y = 3x + 6</h4>
+
+<p>
+Algoritma digunakan untuk menyelesaikan perhitungan matematika secara sistematis.
+</p>
+
+<ul>
+<li>Tentukan nilai x</li>
+<li>Kalikan x dengan 3</li>
+<li>Tambahkan hasilnya dengan 6</li>
+<li>Hasil akhir merupakan nilai y</li>
+</ul>
+
+<hr>
+
+<h3>Soal 2</h3>
+
+<p>
+Apa yang dimaksud dengan algoritma dan program?
+</p>
+
+<p>
+Algoritma adalah langkah-langkah atau urutan cara yang digunakan untuk menyelesaikan suatu masalah secara logis dan sistematis. Sedangkan program adalah kumpulan instruksi yang ditulis menggunakan bahasa pemrograman untuk menjalankan algoritma pada komputer.
+</p>
+
+<hr>
+
+<h3>Soal 3</h3>
+
+<p>
+Suatu algoritma terdiri dari tiga struktur dasar. Jelaskan masing-masing.
+</p>
+
+<p>
+Tiga struktur dasar algoritma terdiri dari:
+</p>
+
+<ul>
+
+<li>
+<b>Sekuensial</b> yaitu langkah-langkah yang dikerjakan secara berurutan dari awal hingga akhir tanpa adanya percabangan.
+</li>
+
+<li>
+<b>Pemilihan (Percabangan)</b> yaitu struktur yang digunakan untuk memilih tindakan berdasarkan kondisi tertentu, misalnya menggunakan konsep jika-maka (if-else).
+</li>
+
+<li>
+<b>Perulangan (Looping)</b> yaitu struktur yang digunakan untuk mengulang suatu proses beberapa kali sampai kondisi tertentu terpenuhi.
+</li>
+
+</ul>
+
+<hr>
+
+<h3>Soal 4</h3>
+
+<p>
+Uraikan fungsi dari bahasa pemrograman Java yang Anda ketahui.
+</p>
+
+<p>
+Bahasa pemrograman Java memiliki berbagai fungsi dalam pengembangan perangkat lunak, antara lain:
+</p>
+
+<ul>
+
+<li>Membuat aplikasi desktop, web, dan mobile.</li>
+
+<li>Mengolah data dan menjalankan program.</li>
+
+<li>Membantu pengembangan sistem yang kompleks.</li>
+
+<li>Bersifat multiplatform sehingga dapat dijalankan pada berbagai perangkat yang mendukung Java.</li>
+
+</ul>
+
+<hr>
+
+<h3>Kesimpulan</h3>
+
+<p>
+Melalui latihan ini, mahasiswa dapat memahami bahwa algoritma tidak hanya digunakan dalam pemrograman, tetapi juga dapat diterapkan dalam berbagai aktivitas sehari-hari. Selain itu, pemahaman mengenai struktur algoritma dan fungsi bahasa pemrograman menjadi dasar penting dalam pengembangan perangkat lunak yang efektif dan terstruktur.
+</p>
+
+</div>
+
+</section>
+</div>
+</section>
+
+<section id="p5">
+<section id="p5">
+
+<div class="placeholder">
+
+<h2>Pertemuan 5</h2>
+
+<h3>Post Test Tipe Data dan Operator Java</h3>
+
+<p>
+Pada pertemuan ini mahasiswa mempelajari konsep tipe data, variabel, array, serta operator dalam bahasa pemrograman Java. Materi ini sangat penting karena menjadi dasar dalam penyimpanan dan pengolahan data pada sebuah program.
+</p>
+
+<a href="p5.pdf" class="btn">📄 Lihat PDF Tugas</a>
+
+<hr>
+
+<h3>Soal 1</h3>
+
+<p>
+Jelaskan perbedaan tipe data primitif dan non-primitif!
+</p>
+
+<h4>Jawaban</h4>
+
+<p>
+<b>Tipe data primitif</b> adalah tipe data dasar yang langsung menyimpan nilai. Tipe data ini sederhana, tidak memiliki method, dan ukuran memorinya sudah ditentukan.
+</p>
+
+<p>
+Contoh tipe data primitif:
+</p>
+
+<ul>
+<li>int</li>
+<li>float</li>
+<li>char</li>
+<li>boolean</li>
+</ul>
+
+<p>
+<b>Tipe data non-primitif</b> adalah tipe data yang lebih kompleks dan biasanya berbentuk objek. Tipe data ini dapat memiliki method atau fungsi, mampu menyimpan banyak nilai, serta lebih fleksibel digunakan dalam pemrograman.
+</p>
+
+<p>
+Contoh tipe data non-primitif:
+</p>
+
+<ul>
+<li>String</li>
+<li>Array</li>
+<li>Class</li>
+<li>Object</li>
+</ul>
+
+<hr>
+
+<h3>Soal 2</h3>
+
+<p>
+Perhatikan penulisan variabel berikut. Uraikan kesalahan yang terdapat pada penulisan tersebut.
+</p>
+
+<pre>
+Int 5angka;
+String
+nama siswa;
+Int static;
+</pre>
+
+<h4>Jawaban</h4>
+
+<ul>
+
+<li>
+Penulisan tipe data salah. Kata <b>Int</b> seharusnya ditulis <b>int</b> menggunakan huruf kecil.
+</li>
+
+<li>
+Nama variabel tidak boleh diawali angka. Penulisan <b>5angka</b> tidak valid dan dapat diganti menjadi <b>angka5</b>.
+</li>
+
+<li>
+Penulisan variabel harus berada dalam satu baris yang benar, misalnya:
+<b>String namaSiswa;</b>
+</li>
+
+<li>
+Kata <b>static</b> merupakan keyword dalam Java sehingga tidak boleh digunakan sebagai nama variabel.
+</li>
+
+</ul>
+
+<hr>
+
+<h3>Soal 3</h3>
+
+<p>
+Berikan contoh cara mendeklarasikan tipe data array!
+</p>
+
+<h4>Jawaban</h4>
+
+<p>
+Array digunakan untuk menyimpan banyak data dengan tipe yang sama dalam satu variabel.
+</p>
+
+<pre>
+int[] angka = {1,2,3,4,5};
+</pre>
+
+<p>
+Atau:
+</p>
+
+<pre>
+int angka[] = new int[5];
+</pre>
+
+<hr>
+
+<h3>Soal 4</h3>
+
+<p>
+Sebutkan dan uraikan operator aritmatika dalam bahasa Java!
+</p>
+
+<h4>Jawaban</h4>
+
+<p>
+Operator aritmatika digunakan untuk melakukan operasi matematika dalam program.
+</p>
+
+<ul>
+
+<li><b>+</b> : Penjumlahan</li>
+
+<li><b>-</b> : Pengurangan</li>
+
+<li><b>*</b> : Perkalian</li>
+
+<li><b>/</b> : Pembagian</li>
+
+<li><b>%</b> : Modulus (sisa hasil bagi)</li>
+
+</ul>
+
+<p>
+Contoh penggunaan:
+</p>
+
+<pre>
+int a = 10;
+int b = 3;
+int hasil = a + b;
+</pre>
+
+<p>
+Output yang dihasilkan adalah 13.
+</p>
+
+<hr>
+
+<h3>Soal 5</h3>
+
+<p>
+Berikan contoh implementasi operator pembagian menggunakan bahasa Java!
+</p>
+
+<h4>Jawaban</h4>
+
+<pre>
+int a = 10;
+int b = 2;
+int hasil = a / b;
+
+System.out.println(hasil);
+</pre>
+
+<p>
+Output:
+</p>
+
+<pre>
+5
+</pre>
+
+<p>
+Jika ingin menghasilkan bilangan desimal:
+</p>
+
+<pre>
+double hasil = 10.0 / 3;
+
+System.out.println(hasil);
+</pre>
+
+<p>
+Output:
+</p>
+
+<pre>
+3.333333
+</pre>
+
+<hr>
+
+<h3>Kesimpulan</h3>
+
+<p>
+Melalui post test ini, mahasiswa dapat memahami perbedaan tipe data primitif dan non-primitif, aturan penulisan variabel yang benar, cara mendeklarasikan array, serta penggunaan operator aritmatika dalam bahasa Java. Pemahaman materi ini menjadi dasar penting dalam proses pembuatan program yang terstruktur dan efisien.
+</p>
+
+</div>
+
+</section>
+</section>
+
+<section id="p8">
+
+<div class="placeholder">
+
+<h2>Pertemuan 8</h2>
+
+<h3>Kombinasi Struktur Algoritma Pemrograman</h3>
+
+<p>
+Dalam pemrograman, sebuah masalah sering kali tidak dapat diselesaikan hanya dengan satu struktur algoritma saja. Oleh karena itu, diperlukan kombinasi beberapa struktur algoritma agar program dapat bekerja sesuai kebutuhan. Struktur yang umum digunakan adalah struktur sekuensial, pemilihan (selection), dan perulangan (looping).
+</p>
+
+<p>
+Kombinasi struktur algoritma merupakan penggunaan dua atau lebih struktur dasar algoritma dalam satu penyelesaian masalah. Dengan menggabungkan beberapa struktur tersebut, program dapat menangani proses yang lebih kompleks dan menghasilkan solusi yang lebih efektif.
+</p>
+
+<h3>Kombinasi Sekuensial dan Pemilihan</h3>
+
+<p>
+Pada kombinasi ini, program menjalankan beberapa instruksi secara berurutan terlebih dahulu, kemudian melakukan pengecekan kondisi untuk menentukan langkah berikutnya.
+</p>
+
+<p>
+Contohnya adalah proses login pada sebuah aplikasi. Pengguna memasukkan username dan password, kemudian sistem memeriksa apakah data yang dimasukkan benar atau salah. Jika benar, pengguna dapat masuk ke sistem. Jika salah, sistem akan menampilkan pesan kesalahan.
+</p>
+
+<h3>Kombinasi Sekuensial dan Perulangan</h3>
+
+<p>
+Kombinasi ini digunakan ketika program harus menjalankan beberapa langkah secara berurutan dan mengulang proses tertentu beberapa kali.
+</p>
+
+<p>
+Contohnya adalah menghitung jumlah nilai beberapa siswa. Program akan meminta data nilai secara berulang hingga semua nilai selesai dimasukkan, kemudian menghitung total dan rata-ratanya.
+</p>
+
+<h3>Kombinasi Pemilihan dan Perulangan</h3>
+
+<p>
+Struktur pemilihan juga dapat digabungkan dengan perulangan. Pada kombinasi ini, setiap perulangan dapat disertai pengecekan kondisi tertentu sebelum melanjutkan proses berikutnya.
+</p>
+
+<p>
+Sebagai contoh, sebuah program akan terus meminta pengguna memasukkan password sampai password yang dimasukkan benar. Selama kondisi belum terpenuhi, proses akan terus diulang.
+</p>
+
+<h3>Manfaat Kombinasi Struktur Algoritma</h3>
+
+<ul>
+
+<li>Menyelesaikan masalah yang lebih kompleks.</li>
+
+<li>Membuat program lebih fleksibel.</li>
+
+<li>Mengurangi penulisan kode yang berulang.</li>
+
+<li>Meningkatkan efisiensi program.</li>
+
+<li>Mempermudah pengembangan sistem yang lebih besar.</li>
+
+</ul>
+
+<h3>Kesimpulan</h3>
+
+<p>
+Kombinasi struktur algoritma merupakan penerapan beberapa struktur dasar algoritma secara bersamaan dalam satu program. Dengan menggabungkan struktur sekuensial, pemilihan, dan perulangan, programmer dapat menyelesaikan berbagai permasalahan dengan lebih efektif dan menghasilkan program yang lebih terstruktur.
+</p>
+
+</div>
+
+</section>
+
+<section id="p9">
+
+<div class="placeholder">
+
+<h2>Pertemuan 9</h2>
+
+<h3>Latihan Struktur Algoritma Sekuensial</h3>
+
+<p>
+Pada pertemuan ini mahasiswa diberikan beberapa pertanyaan mengenai instruksi dalam algoritma dan struktur algoritma sekuensial. Materi ini penting karena struktur sekuensial merupakan bentuk algoritma paling dasar yang digunakan dalam pemrograman.
+</p>
+
+<a href="tugas3.pdf.pdf" class="btn">📄 Lihat PDF Tugas</a>
+
+<h3>Soal 1</h3>
+
+<p>
+Apa yang Anda ketahui tentang instruksi pada algoritma?
+</p>
+
+<h4>Jawaban</h4>
+
+<p>
+Instruksi pada algoritma adalah perintah atau langkah yang harus dilakukan untuk menyelesaikan suatu masalah. Instruksi disusun secara logis dan berurutan agar menghasilkan output yang sesuai dengan tujuan yang diinginkan.
+</p>
+
+<h3>Soal 2</h3>
+
+<p>
+Apa yang dimaksud dengan struktur algoritma sekuensial?
+</p>
+
+<h4>Jawaban</h4>
+
+<p>
+Struktur algoritma sekuensial adalah struktur algoritma yang menjalankan instruksi secara berurutan dari awal hingga akhir. Setiap langkah akan dikerjakan satu per satu sesuai urutan yang telah ditentukan tanpa adanya percabangan maupun perulangan.
+</p>
+
+<h3>Soal 3</h3>
+
+<p>
+Bagaimana karakteristik dari struktur sekuensial?
+</p>
+
+<h4>Jawaban</h4>
+
+<p>
+Karakteristik struktur sekuensial antara lain:
+</p>
+
+<p>1. Instruksi dijalankan secara berurutan.</p>
+
+<p>2. Setiap langkah hanya dikerjakan satu kali.</p>
+
+<p>3. Tidak memiliki percabangan kondisi.</p>
+
+<p>4. Tidak terdapat proses perulangan.</p>
+
+<p>5. Mudah dipahami dan diterapkan pada program sederhana.</p>
+
+<h3>Soal 4</h3>
+
+<p>
+Berikan contoh sederhana penggunaan struktur sekuensial!
+</p>
+
+<h4>Jawaban</h4>
+
+<p>
+Contoh sederhana penggunaan struktur sekuensial adalah menghitung luas persegi panjang.
+</p>
+
+<p>1. Masukkan nilai panjang.</p>
+
+<p>2. Masukkan nilai lebar.</p>
+
+<p>3. Hitung luas = panjang × lebar.</p>
+
+<p>4. Tampilkan hasil luas.</p>
+
+<p>
+Langkah-langkah tersebut dilakukan secara berurutan dari awal hingga akhir sehingga termasuk dalam struktur algoritma sekuensial.
+</p>
+
+<h3>Kesimpulan</h3>
+
+<p>
+Struktur algoritma sekuensial merupakan struktur dasar yang paling sederhana dalam pemrograman. Semua instruksi dijalankan secara berurutan sehingga mudah dipahami dan digunakan untuk menyelesaikan berbagai permasalahan sederhana.
+</p>
+
+</div>
+
+</section>
+
+<section id="p10">
+
+<div class="placeholder">
+
+<h2>Pertemuan 10</h2>
+
+<h3>Struktur Algoritma Pemrograman Sekuensial</h3>
+
+<p>
+Struktur sekuensial merupakan struktur algoritma yang paling sederhana. Pada struktur ini, setiap instruksi dijalankan secara berurutan dari awal hingga akhir tanpa adanya percabangan maupun perulangan. Seluruh langkah akan diproses sesuai urutan yang telah ditentukan sehingga alur program menjadi lebih mudah dipahami dan dianalisis.
+</p>
+
+<p>
+Struktur sekuensial banyak digunakan dalam program sederhana seperti menghitung luas bangun datar, menghitung nilai rata-rata, dan berbagai proses perhitungan lainnya yang tidak memerlukan pengambilan keputusan maupun pengulangan.
+</p>
+
+<h3>Contoh Flowchart Struktur Sekuensial</h3>
+
+<img src="flowchart.jpeg"
+alt="Flowchart Struktur Sekuensial"
+style="width:100%;max-width:500px;display:block;margin:10px auto;border-radius:8px;">
+
+<p>
+Flowchart di atas menunjukkan alur penyelesaian masalah menggunakan struktur algoritma sekuensial. Setiap langkah dilakukan secara berurutan mulai dari proses awal hingga proses akhir.
+</p>
+
+<h3>Penjelasan Simbol Flowchart</h3>
+
+<p>
+Simbol oval (Terminator) digunakan untuk menunjukkan awal (Start) dan akhir (End) suatu algoritma.
+</p>
+
+<p>
+Simbol persegi panjang (Process) digunakan untuk menunjukkan proses pengolahan data atau perhitungan yang dilakukan oleh program.
+</p>
+
+<p>
+Simbol jajar genjang (Input/Output) digunakan untuk menerima data masukan maupun menampilkan hasil kepada pengguna.
+</p>
+
+<p>
+Garis panah (Flow Line) digunakan untuk menunjukkan arah jalannya proses dari satu langkah ke langkah berikutnya.
+</p>
+
+<h3>Penjelasan Pseudocode</h3>
+
+<p>
+Pseudocode adalah cara penulisan algoritma menggunakan bahasa sederhana yang mudah dipahami manusia. Pseudocode digunakan untuk menggambarkan logika program sebelum diterjemahkan ke dalam bahasa pemrograman tertentu.
+</p>
+
+<p>
+Dengan menggunakan pseudocode, programmer dapat merancang solusi suatu masalah secara sistematis tanpa harus memikirkan aturan sintaks bahasa pemrograman terlebih dahulu.
+</p>
+
+<pre>
+Mulai
+Input Data
+Proses Data
+Tampilkan Hasil
+Selesai
+</pre>
+
+<h3>Hubungan Flowchart, Pseudocode, dan Program</h3>
+
+<p>
+Flowchart, pseudocode, dan program merupakan bagian yang saling berkaitan dalam pengembangan perangkat lunak. Flowchart digunakan untuk menggambarkan alur proses secara visual, pseudocode digunakan untuk menjelaskan langkah-langkah algoritma dalam bentuk tulisan, sedangkan program merupakan implementasi algoritma menggunakan bahasa pemrograman tertentu.
+</p>
+
+<p>
+Ketiga komponen tersebut membantu programmer dalam merancang dan mengembangkan solusi yang terstruktur sehingga proses pembuatan program menjadi lebih mudah dan efisien.
+</p>
+
+<h3>Tugas Pertemuan 10</h3>
+
+<p>
+Berikut merupakan hasil tugas yang telah dikerjakan pada pertemuan 10.
+</p>
+
+<a href="tugas4.pdf.pdf" class="btn">
+📄 Lihat PDF Tugas Pertemuan 10
+</a>
+
+<h3>Kesimpulan</h3>
+
+<p>
+Struktur algoritma sekuensial merupakan dasar dari berbagai algoritma dalam pemrograman. Dengan memahami flowchart, pseudocode, dan implementasi program, mahasiswa dapat merancang solusi yang lebih terstruktur dan mudah dipahami sebelum membuat program yang sebenarnya.
+</p>
+
+</div>
+
+</section>
+
+<section id="p11">
+
+<div class="placeholder">
+
+<h2>Pertemuan 11</h2>
+
+<h3>Struktur Algoritma Pemrograman Perulangan</h3>
+
+<p>
+Perulangan (looping) merupakan salah satu struktur dasar dalam algoritma yang digunakan untuk menjalankan suatu instruksi secara berulang-ulang sesuai kondisi tertentu. Dengan menggunakan perulangan, programmer tidak perlu menuliskan instruksi yang sama berkali-kali sehingga program menjadi lebih singkat, efisien, dan mudah dipelajari.
+</p>
+
+<p>
+Struktur perulangan sering digunakan dalam berbagai aplikasi, seperti menampilkan data secara berulang, menghitung jumlah nilai, membuat tabel perkalian, dan berbagai proses lain yang membutuhkan pengulangan instruksi.
+</p>
+
+<h3>Perulangan For</h3>
+
+<p>
+Perulangan for digunakan ketika jumlah pengulangan sudah diketahui sejak awal. Struktur ini terdiri dari nilai awal, kondisi, dan perubahan nilai yang akan dieksekusi secara otomatis selama kondisi masih terpenuhi.
+</p>
+
+<p>
+Perulangan for biasanya digunakan untuk menampilkan angka berurutan, melakukan perhitungan berulang, maupun mengakses data dalam jumlah tertentu.
+</p>
+
+<h3>Perulangan While</h3>
+
+<p>
+Perulangan while digunakan ketika jumlah pengulangan belum diketahui secara pasti. Perulangan akan terus berjalan selama kondisi yang diberikan bernilai benar (true).
+</p>
+
+<p>
+Struktur while sangat cocok digunakan pada program yang membutuhkan pengecekan kondisi secara terus-menerus sebelum proses berikutnya dijalankan.
+</p>
+
+<h3>Perulangan Do While</h3>
+
+<p>
+Perulangan do while hampir sama dengan while, namun memiliki perbedaan pada proses pengecekan kondisi. Pada do while, instruksi akan dijalankan terlebih dahulu kemudian kondisi diperiksa.
+</p>
+
+<p>
+Karena proses dijalankan lebih dahulu, maka perulangan do while pasti akan dieksekusi minimal satu kali meskipun kondisi akhirnya bernilai salah.
+</p>
+
+<h3>Perulangan Bersarang (Nested Loop)</h3>
+
+<p>
+Nested Loop atau perulangan bersarang adalah perulangan yang berada di dalam perulangan lainnya. Struktur ini digunakan ketika suatu proses memerlukan pengulangan bertingkat.
+</p>
+
+<p>
+Contoh penggunaan nested loop dapat ditemukan pada pembuatan pola bintang, tabel perkalian, serta berbagai proses pengolahan data dua dimensi.
+</p>
+
+<h3>Manfaat Perulangan</h3>
+
+<p>
+1. Mengurangi penulisan kode yang berulang.</p>
+
+<p>
+2. Membuat program lebih efisien.</p>
+
+<p>
+3. Mempermudah pengolahan data dalam jumlah banyak.</p>
+
+<p>
+4. Membantu menyelesaikan masalah yang membutuhkan proses berulang.</p>
+
+<p>
+5. Membuat algoritma lebih terstruktur dan mudah dipahami.</p>
+
+<h3>Tugas Pertemuan 11</h3>
+
+<p>
+Pada pertemuan ini mahasiswa diminta membuat program yang menggunakan struktur perulangan For, While, Do While, dan Nested Loop. Hasil pengerjaan tugas telah dilampirkan dalam bentuk PDF berikut.
+</p>
+
+<a href="tugas5.pdf.pdf" class="btn">
+📄 Lihat PDF Tugas Pertemuan 11
+</a>
+
+<h3>Kesimpulan</h3>
+
+<p>
+Struktur perulangan merupakan komponen penting dalam pemrograman karena memungkinkan suatu instruksi dijalankan berkali-kali secara otomatis. Dengan memahami penggunaan For, While, Do While, dan Nested Loop, mahasiswa dapat membuat program yang lebih efektif, efisien, dan mudah dikembangkan.
+</p>
+
+</div>
+
+</section>
+
+<section id="p12">
+
+<div class="placeholder">
+
+<h2>Pertemuan 12</h2>
+
+<h3>Penguatan dan Review Materi Algoritma Pemrograman</h3>
+
+<p>
+Pada pertemuan ini dilakukan penguatan materi yang telah dipelajari pada pertemuan sebelumnya. Tujuan kegiatan ini adalah untuk membantu mahasiswa memahami kembali konsep-konsep dasar algoritma dan pemrograman sebelum melanjutkan ke materi yang lebih kompleks.
+</p>
+
+<p>
+Selama perkuliahan, mahasiswa telah mempelajari berbagai konsep dasar seperti pengertian algoritma, struktur algoritma, tipe data, variabel, operator, array, flowchart, pseudocode, serta struktur perulangan. Seluruh materi tersebut saling berkaitan dan menjadi fondasi dalam pengembangan program komputer.
+</p>
+
+<h3>Review Konsep Algoritma</h3>
+
+<p>
+Algoritma merupakan urutan langkah-langkah logis dan sistematis yang digunakan untuk menyelesaikan suatu masalah. Algoritma menjadi dasar dalam pembuatan program karena sebelum menulis kode, programmer harus terlebih dahulu merancang solusi terhadap masalah yang akan diselesaikan.
+</p>
+
+<p>
+Algoritma yang baik harus memiliki langkah yang jelas, mudah dipahami, memiliki input dan output, serta menghasilkan solusi yang tepat sesuai tujuan yang diinginkan.
+</p>
+
+<h3>Review Struktur Dasar Algoritma</h3>
+
+<p>
+Terdapat tiga struktur dasar algoritma yang menjadi fondasi dalam pemrograman, yaitu struktur sekuensial, pemilihan, dan perulangan.
+</p>
+
+<p>
+Struktur sekuensial menjalankan instruksi secara berurutan dari awal hingga akhir. Struktur pemilihan digunakan untuk menentukan keputusan berdasarkan kondisi tertentu. Sedangkan struktur perulangan digunakan untuk menjalankan suatu instruksi secara berulang hingga kondisi tertentu terpenuhi.
+</p>
+
+<h3>Review Flowchart dan Pseudocode</h3>
+
+<p>
+Flowchart digunakan untuk menggambarkan alur algoritma dalam bentuk diagram sehingga lebih mudah dipahami secara visual. Sementara itu, pseudocode digunakan untuk menjelaskan langkah-langkah algoritma dalam bentuk tulisan sederhana yang tidak terikat dengan bahasa pemrograman tertentu.
+</p>
+
+<p>
+Kedua alat bantu tersebut sangat penting dalam proses perancangan program karena membantu programmer memahami logika penyelesaian masalah sebelum menulis kode program.
+</p>
+
+<h3>Review Tipe Data dan Variabel</h3>
+
+<p>
+Tipe data digunakan untuk menentukan jenis data yang akan disimpan dalam program, sedangkan variabel digunakan sebagai tempat penyimpanan data tersebut. Pemahaman terhadap tipe data dan variabel sangat penting karena hampir seluruh program menggunakan kedua konsep ini dalam pengolahan data.
+</p>
+
+<h3>Review Perulangan</h3>
+
+<p>
+Perulangan digunakan untuk menjalankan instruksi secara berulang tanpa harus menuliskan kode yang sama berkali-kali. Beberapa bentuk perulangan yang telah dipelajari meliputi For, While, Do While, dan Nested Loop.
+</p>
+
+<p>
+Penggunaan perulangan membuat program menjadi lebih efisien dan mudah dikembangkan, terutama ketika harus memproses data dalam jumlah yang banyak.
+</p>
+
+<h3>Kesimpulan</h3>
+
+<p>
+Melalui kegiatan review dan penguatan materi ini, mahasiswa diharapkan mampu memahami kembali seluruh konsep dasar algoritma pemrograman yang telah dipelajari. Penguasaan konsep-konsep dasar tersebut menjadi bekal penting dalam menyelesaikan berbagai permasalahan pemrograman dan mengembangkan program yang lebih kompleks di masa mendatang.
+</p>
+
+</div>
+
+</section>
+
+<section id="p13">
+
+<div class="placeholder">
+
+<h2>Pertemuan 13</h2>
+
+<h3>Post Test Array</h3>
+
+<p>
+Pada pertemuan ini mahasiswa mempelajari konsep array sebagai salah satu struktur data yang sangat penting dalam pemrograman. Array digunakan untuk menyimpan banyak data dalam satu variabel sehingga proses pengolahan data menjadi lebih mudah, terstruktur, dan efisien.
+</p>
+
+<a href="tugas6.pdf" class="btn">
+📄 Lihat PDF Tugas
+</a>
+
+<h3>Soal 1</h3>
+
+<p>
+Apa yang dimaksud dengan array?
+</p>
+
+<h4>Jawaban</h4>
+
+<p>
+Array adalah struktur data yang digunakan untuk menyimpan sekumpulan data dengan tipe yang sama dalam satu variabel. Setiap elemen pada array memiliki indeks yang digunakan untuk mengakses data tersebut sehingga pengelolaan data menjadi lebih terorganisir dan efisien.
+</p>
+
+<h3>Soal 2</h3>
+
+<p>
+Jelaskan yang dimaksud dengan array satu dimensi!
+</p>
+
+<h4>Jawaban</h4>
+
+<p>
+Array satu dimensi adalah array yang hanya memiliki satu baris atau satu deretan elemen. Setiap elemen diakses menggunakan satu indeks sehingga bentuknya menyerupai daftar data yang tersusun secara linear.
+</p>
+
+<p>
+Contoh:
+</p>
+
+<pre>
+nilai = [80, 85, 90, 95]
+</pre>
+
+<p>
+Pada contoh tersebut, angka 80 berada pada indeks ke-0, angka 85 berada pada indeks ke-1, dan seterusnya.
+</p>
+
+<h3>Soal 3</h3>
+
+<p>
+Bagaimana cara mendeklarasikan array?
+</p>
+
+<h4>Jawaban</h4>
+
+<p>
+Array dideklarasikan dengan menentukan nama array dan mengisi elemen-elemennya. Dalam Python, array sederhana biasanya direpresentasikan menggunakan list.
+</p>
+
+<p>
+Contoh:
+</p>
+
+<pre>
+buah = ["Apel", "Mangga", "Jeruk", "Pisang"]
+</pre>
+
+<p>
+Selain menggunakan list, array juga dapat dibuat menggunakan modul array.
+</p>
+
+<pre>
+from array import array
+
+angka = array('i', [1, 2, 3, 4, 5])
+</pre>
+
+<h3>Soal 4</h3>
+
+<p>
+Tipe data apa yang digunakan untuk mendeklarasikan array?
+</p>
+
+<h4>Jawaban</h4>
+
+<p>
+Data yang disimpan dalam array umumnya memiliki tipe yang sama atau homogen. Beberapa tipe data yang sering digunakan antara lain:
+</p>
+
+<p>1. Integer (bilangan bulat)</p>
+
+<p>2. Float (bilangan desimal)</p>
+
+<p>3. Character (karakter)</p>
+
+<p>4. String (teks)</p>
+
+<p>5. Boolean (True atau False)</p>
+
+<p>
+Contoh:
+</p>
+
+<pre>
+umur = [18, 19, 20, 21]
+
+nilai = [85.5, 90.0, 88.5]
+</pre>
+
+<h3>Soal 5</h3>
+
+<p>
+Sebutkan macam-macam array yang kamu ketahui!
+</p>
+
+<h4>Jawaban</h4>
+
+<p>
+Berdasarkan jumlah dimensinya, array dibedakan menjadi beberapa jenis:
+</p>
+
+<p>
+<b>1. Array Satu Dimensi (1D)</b><br>
+Memiliki satu indeks dan biasanya digunakan untuk menyimpan data dalam bentuk daftar atau urutan.
+</p>
+
+<p>
+<b>2. Array Dua Dimensi (2D)</b><br>
+Memiliki baris dan kolom sehingga sering digunakan untuk menyimpan data berbentuk tabel atau matriks.
+</p>
+
+<p>
+<b>3. Array Tiga Dimensi (3D)</b><br>
+Memiliki lapisan, baris, dan kolom sehingga dapat digunakan untuk menyimpan data yang lebih kompleks.
+</p>
+
+<p>
+<b>4. Array Multidimensi</b><br>
+Merupakan array yang memiliki lebih dari dua dimensi dan biasanya digunakan dalam simulasi, komputasi ilmiah, maupun pengolahan data tingkat lanjut.
+</p>
+
+<h3>Kesimpulan</h3>
+
+<p>
+Array merupakan struktur data yang berfungsi untuk menyimpan banyak data dalam satu variabel sehingga pengelolaan data menjadi lebih efektif dan terorganisir. Setiap elemen dalam array dapat diakses menggunakan indeks tertentu. Selain array satu dimensi, terdapat pula array dua dimensi, tiga dimensi, dan multidimensi yang digunakan sesuai kebutuhan program. Pemahaman mengenai array sangat penting karena konsep ini sering digunakan dalam berbagai bahasa pemrograman dan pengembangan perangkat lunak.
+</p>
+
+</div>
+
+</section>
+
+
+<div style="text-align:center;margin-top:20px;">
+<a href="#top" class="btn">
+⬆️ Kembali ke Atas
+</a>
 </div>
 
 <footer>
-<div>
-Universitas Kanjuruhan Malang
-</div>
 
-<div>
-Keep Coding and Keep Growing
-</div>
+<h3>Praktikum Algoritma Pemrograman</h3>
+
+<p>
+Disusun oleh:
+<b>Nadila Rahma Anggraini</b>
+</p>
+
+<p>
+NIM: 250403010016
+</p>
+
+<p>
+Dosen Pengampu:
+Moh. Ahsan, S.Kom., MT.
+</p>
+
+<p>
+© 2026 Praktikum Algoritma Pemrograman
+</p>
+
 </footer>
-
-</body>
-</html>
