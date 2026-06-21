@@ -306,7 +306,7 @@ Mulai Membaca
 <div class="card">
 
 <p>
-Website ini merupakan dokumentasi pembelajaran Praktikum Algoritma Pemrograman yang berisi kumpulan materi, tugas, latihan, dan pembahasan yang telah dipelajari selama satu semester. Setiap pertemuan disusun secara sistematis untuk memudahkan proses pembelajaran serta menjadi sarana dokumentasi hasil praktikum yang telah dilaksanakan.
+Website ini merupakan dokumentasi pembelajaran Algoritma Pemrograman yang berisi kumpulan materi, tugas, latihan, dan pembahasan yang telah dipelajari selama satu semester. Setiap pertemuan disusun secara sistematis untuk memudahkan proses pembelajaran serta menjadi sarana dokumentasi hasil praktikum yang telah dilaksanakan.
 </p>
 
 <br>
@@ -319,11 +319,21 @@ website agar lebih mudah dipelajari kembali.
 
 </p>
 
+<h3>Tujuan Pembelajaran</h3>
+
+<ul>
+<li>Memahami konsep dasar algoritma dan pemrograman.</li>
+<li>Memahami struktur dasar algoritma.</li>
+<li>Mampu membuat flowchart dan pseudocode.</li>
+<li>Mampu menerapkan struktur sekuensial dan perulangan.</li>
+<li>Memahami penggunaan array dalam pemrograman.</li>
+</ul>
+
 </div>
 
 <section class="daftar-isi">
 
-<h2>Daftar Isi Praktikum</h2>
+<h2>Daftar Isi</h2>
 
 <ul>
 
@@ -348,6 +358,7 @@ website agar lebih mudah dipelajari kembali.
 <li>Pertemuan 12 - Penguatan Materi</li>
 
 <li>Pertemuan 13 - Array</li>
+
 
 <section id="materi">
 
@@ -1116,7 +1127,9 @@ Struktur algoritma sekuensial merupakan struktur dasar yang paling sederhana dal
 
 <h2>Pertemuan 10</h2>
 
+
 <h3>Struktur Algoritma Pemrograman Sekuensial</h3>
+
 
 <p>
 Struktur sekuensial merupakan struktur algoritma yang paling sederhana. Pada struktur ini, setiap instruksi dijalankan secara berurutan dari awal hingga akhir tanpa adanya percabangan maupun perulangan. Seluruh langkah akan diproses sesuai urutan yang telah ditentukan sehingga alur program menjadi lebih mudah dipahami dan dianalisis.
@@ -1125,6 +1138,15 @@ Struktur sekuensial merupakan struktur algoritma yang paling sederhana. Pada str
 <p>
 Struktur sekuensial banyak digunakan dalam program sederhana seperti menghitung luas bangun datar, menghitung nilai rata-rata, dan berbagai proses perhitungan lainnya yang tidak memerlukan pengambilan keputusan maupun pengulangan.
 </p>
+
+<h3>Manfaat Flowchart</h3>
+
+<ul>
+<li>Memudahkan memahami alur program.</li>
+<li>Mengurangi kesalahan logika.</li>
+<li>Mempermudah komunikasi antar programmer.</li>
+<li>Membantu proses dokumentasi program.</li>
+</ul>
 
 <h3>Contoh Flowchart Struktur Sekuensial</h3>
 
@@ -1379,6 +1401,62 @@ Melalui kegiatan review dan penguatan materi ini, mahasiswa diharapkan mampu mem
 Pada pertemuan ini mahasiswa mempelajari konsep array sebagai salah satu struktur data yang sangat penting dalam pemrograman. Array digunakan untuk menyimpan banyak data dalam satu variabel sehingga proses pengolahan data menjadi lebih mudah, terstruktur, dan efisien.
 </p>
 
+
+<h3>Pengenalan Array</h3>
+
+<p>
+Array merupakan salah satu struktur data yang digunakan untuk menyimpan sekumpulan data yang memiliki tipe yang sama ke dalam satu variabel. Dengan adanya array, programmer tidak perlu membuat banyak variabel untuk menyimpan data yang sejenis. Setiap data yang tersimpan di dalam array disebut elemen, dan setiap elemen memiliki posisi tertentu yang disebut indeks.
+</p>
+
+<p>
+Penggunaan array sangat membantu dalam proses pengolahan data karena membuat program menjadi lebih terstruktur, efisien, dan mudah dikelola. Misalnya, jika ingin menyimpan nilai 30 mahasiswa, programmer tidak perlu membuat 30 variabel berbeda. Cukup menggunakan satu array yang berisi seluruh data nilai tersebut sehingga proses penyimpanan dan pengolahan data menjadi lebih sederhana.
+</p>
+
+<p>
+Dalam sebagian besar bahasa pemrograman, indeks array dimulai dari angka 0. Artinya, elemen pertama berada pada indeks ke-0, elemen kedua berada pada indeks ke-1, dan seterusnya. Indeks digunakan untuk mengakses, mengubah, maupun menampilkan data yang terdapat di dalam array.
+</p>
+
+<p>
+Array banyak digunakan dalam berbagai aplikasi pemrograman seperti pengolahan nilai mahasiswa, penyimpanan daftar barang, data pelanggan, data penjualan, hingga pengolahan data dalam jumlah besar. Karena kemampuannya dalam menyimpan banyak data secara terorganisir, array menjadi salah satu struktur data dasar yang wajib dipahami oleh setiap programmer.
+</p>
+
+<h3>Cara Membuat Array: Deklarasi yang Sederhana</h3>
+<p> mendeklarasikan array dengan dua cara:</p>
+<p>tipe_data[] nama_array = new tipe_data[jumlah_elemen];  </p>
+<p>atau</p>
+<p>tipe_data nama_array[] = new tipe_data[jumlah_elemen];  </p>
+<p>Contohnya:</p>
+<p>int[] nilai = new int[5]; // Array untuk menyimpan 5 angka  </p>
+<p>Jika langsung mengisi datanya bisa seperti ini:</p>
+<p>int[] nilai = {85, 90, 75, 88, 92};  </p>
+<p>Di sini, nilai adalah nama array-nya, int adalah tipe datanya, dan kurung siku [] menunjukkan bahwa ini adalah array.</p>
+<h3>Jenis-jenis Array</h3>
+<p>1.Array Satu dimensi</p>
+<p>Ini yang paling dasar, seperti daftar belanja. Satu baris, banyak elemen. Contoh:</p>
+<p>String[] buah = {"Apel", "Mangga", "Pisang"};</p>
+<p>2.Array Dua Dimensi</p>
+<p>Ini seperti tabel, ada baris dan kolom. Cocok untuk data yang lebih kompleks, misalnya matriks. Contoh:</p>
+<p>int[][] matriks = {{1, 2}, {3, 4}};  </p>
+<p>3.Array Multidimensi</p>
+<p>Ini untuk yang lebih advance, dengan lebih dari dua dimensi. Biasanya digunakan dalam simulasi atau game 3D. Contohnya agak rumit, tapi intinya menggunakan indeks lebih dari dua.</p>
+<h3>Apa Saja yang Bisa Dilakukan dengan Array?</h3>
+<p>Array tidak hanya untuk menyimpan data, tetapi juga memiliki beberapa operasi menarik:</p>
+<p>-Penyisipan (Insertion): Memasukkan data ke array menggunakan indeks. Misalnya, nilai[0] = 95; untuk mengisi elemen pertama.</p>
+<p>-Pengaksesan (Access): Mengambil data menggunakan indeks. Contoh, System.out.println(nilai[1]); untuk melihat nilai kedua.</p>
+<p>Pencarian (Searching): Mencari data tertentu dengan mengecek satu per satu elemennya.</p>
+<p>Contoh sederhana:</p>
+<p>int[] angka = {10, 20, 30};</p>
+<p>System.out.println(angka[1]); // Output: 20  </p>
+<h3>Kelebihan dan Kekurangan Array</h3>
+<p>Kelebihan:</p>
+<P>1.Efisien: Menyimpan banyak data dalam satu tempat.</P>
+<P>2.Cepat Diakses: Karena datanya berurutan di memori, aksesnya sangat cepat.</P>
+<p>Kekurangan:</p>
+<p>1.Ukuran Tetap: Harus menentukan jumlah elemen dari awal, tidak bisa menambah seenaknya.</p>
+<p>2.Tipe Sama: Semua elemen harus memiliki tipe data yang sama, tidak bisa campur.</p>
+
+
+
 <a href="tugas6.pdf" class="btn">
 📄 Lihat PDF Tugas
 </a>
@@ -1532,7 +1610,7 @@ Array merupakan struktur data yang berfungsi untuk menyimpan banyak data dalam s
 
 <footer>
 
-<h3>Praktikum Algoritma Pemrograman</h3>
+<h3>Algoritma Pemrograman</h3>
 
 <p>
 Disusun oleh:
@@ -1549,7 +1627,8 @@ Moh. Ahsan, S.Kom., MT.
 </p>
 
 <p>
-© 2026 Praktikum Algoritma Pemrograman
+Website ini dibuat sebagai dokumentasi pembelajaran 
+Algoritma Pemrograman Semester Genap 2026.
 </p>
 
 </footer>
